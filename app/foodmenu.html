@@ -4,6 +4,9 @@
     {{foodMenu.name}}
   </span>
   <span class="mdl-list__item-secondary-action">
-    <mdl-checkbox mdl-upgrade ng-model="is_urgent"></mdl-checkbox>
+    <!-- <mdl-checkbox ng-model="clicked" ng-click="change()"></mdl-checkbox> -->
+    <label class="mdl-checkbox mdl-js-checkbox" for="list-checkbox-20">
+      <input type="checkbox" id="list-checkbox-20" class="mdl-checkbox__input" ng-click="change()" checked />
+    </label>
   </span>
 </li>

@@ -45,7 +45,8 @@ myApp.controller("AppCtrl", ['$scope', '$http', function($scope, $http){
       _id: count
     };
     $scope.foodMenus.push($scope.foodMenu);
-    console.log("count : ", count);
+    console.log("checked : ", $scope.foodMenu);
+
     // $http.post("/foodmenu/", $scope.field).success(function(response){
     //   console.log("post success :", response);
     // }).error(function(data, status, headers, config) {
@@ -82,7 +83,16 @@ myApp.directive('foodDisplay', function($compile) {
     scope: false,
     templateUrl: 'foodmenu.html',
     link: function(scope, element, attrs) {
-
+      console.log("element : ", element[0]);
+      scope.change = function() {
+        componentHandler.upgradeElement(element[0].querySelector('#list-checkbox-20'));
+        if (scope.checked == true) {
+          console.log("true");
+          console.log(this.foodMenu.checkedNum);
+        } else {
+          console.log("false");
+        }
+      }
     }
   };
 });

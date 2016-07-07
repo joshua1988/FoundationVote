@@ -264,5 +264,8 @@ export default StyleSheet.create({
     "mdl-mega-footer": {
         "positon": "relative",
         "bottom": 0
+    },
+    "mdl-card__supporting-text": {
+        "background": "white"
     }
 });
