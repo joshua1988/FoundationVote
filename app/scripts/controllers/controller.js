@@ -1,6 +1,22 @@
 // var myApp = angular.module('myApp', ["ng-fusioncharts", "angular-datepicker", "datatables", "ngResource"]);
-var myApp = angular.module('myApp', ['mdl', "ngResource"]);
+var myApp = angular.module('myApp', ["ngResource"]);
 myApp.controller("AppCtrl", ['$scope', '$http', function($scope, $http){
+
+  $scope.showMeetupDialog = function() {
+    $('#modal1').openModal();
+    $('select').material_select();
+  };
+  $scope.addMeetup = function() {
+    console.log("added");
+  };
+  $scope.moveTo2ndTab = function() {
+    $('ul.tabs').tabs('select_tab', 'test2');
+  };
+  $scope.moveTo3rdTab = function() {
+    // 선택한 카드의 (날짜) + (오케이션) + (기존 음식 정보 페치하기)
+    $('ul.tabs').tabs('select_tab', 'test3');
+  };
+
 
   var refresh = function() {
     // 회식 참석자 명단 get
